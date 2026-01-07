@@ -1,0 +1,40 @@
+name: Kaya FAQ - Development Summary
+description: Track project idea, challenges faced, and solutions implemented
+title: "[Dev Summary] Kaya FAQ"
+labels: enhancement, documentation
+assignees: ""
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        # Kaya FAQ - Development Summary
+
+        ## Project Idea
+        Kaya FAQ is a local question-answering system using Python, LangChain, Cohere embeddings, and FAISS. It retrieves answers from your own documents using embeddings and a vector store.
+
+        ## Tech Stack
+        - Python 3.12
+        - LangChain
+        - Cohere (`langchain-cohere`)
+        - FAISS
+
+        ## Challenges Faced & Solutions
+        - **ModuleNotFoundError** → Fixed imports and updated packages.
+        - **Cohere 401 Unauthorized** → Generated new API key & switched to `langchain-cohere`.
+        - **build_qa_chain TypeError** → Pass the key inside `CohereEmbeddings` instead of the function.
+        - **Missing documents** → Added required files to `data/` folder.
+        - **Deprecation / Pydantic validation errors** → Updated to latest API versions.
+        - **Version conflicts / package issues** → Aligned LangChain, Cohere, and other dependencies.
+
+        ## Outcome
+        - Local QA chain works.
+        - Embeddings & FAISS vector store functional.
+        - Learned API key management, handling version conflicts, and staying updated with API changes.
+
+        ## Key Lessons
+        - Check package versions & dependencies.
+        - Keep up with API updates to prevent breaks.
+        - Manage API keys securely.
+
+        ---
